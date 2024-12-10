@@ -1553,7 +1553,7 @@ export class Node<NodeType extends ts.Node = ts.Node> {
       if (oldNode === newNode && (newNode as any).emitNode == null)
         return;
 
-      const start = oldNode.getStart(compilerSourceFile, true);
+      const start = oldNode.pos;
       const end = oldNode.end;
       let lastTransformation: Transformation | undefined;
 
